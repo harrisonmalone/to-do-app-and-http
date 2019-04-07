@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="information-container">
+      <h3>Name: <%= @running_data["firstname"] %> <%= @running_data["lastname"] %></h3>
+      <h5>Country: <%= @running_data["country"] %></h5>
+      <% if @running_data["sex"] == "M" %>
+        <h5>Sex: Male</h5>
+      <% else %>
+        <h5>Sex: Female</h5>
+      <% end %>
+      <h5>City: <%= @running_data["city"] %></h5>
+      <img src="<%= @running_data["profile"] %>" alt="profile_image">
+    </div>
+  </div>
+  <%= @running_data %>
+</body>
+</html>
